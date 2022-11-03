@@ -1,0 +1,37 @@
+class square():
+    def __init__(self,hight = '0', width='0'):
+        self.hight = hight
+        self.width = width
+    @property
+    def hight(self):
+        print("retriving hight")
+        return self.__hight
+    @hight.setter
+    def hight(self,value):
+        if value.isdigit():
+            self.__hight = value
+        else:
+            print("please only numbers are allowed here ")
+
+    @property
+    def width(self):
+        print("retriving hight")
+        return self.width
+    @width.setter
+    def width(self,value):
+        if value.isdigit():
+            self.__hight = value
+        else:
+            print("please only numbers are allowed here ")
+    def get(self):
+        return int(self.__width) * int(self.__hight)
+def main():
+    asq = square()
+    hight = input("enter the hight of the thing")
+    width = input("enter the with of the thing")
+    asq.hight = hight
+    asq.width = width
+    print(hight)
+    print(width)
+    print(asq.get())
+main()
