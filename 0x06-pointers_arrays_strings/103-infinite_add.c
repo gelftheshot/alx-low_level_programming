@@ -27,9 +27,9 @@ void rev_string(char *n)
 }
 
 /**
- * infinite_add - add numbers
- * @n1: text representation of first num
- * @n2: text representation of second nuj
+ * infinite_add - add 2 numbers together
+ * @n1: text representation of 1st number to add
+ * @n2: text representation of 2nd number to add
  * @r: pointer to buffer
  * @size_r: buffer size
  * Return: pointer to calling function
@@ -37,8 +37,8 @@ void rev_string(char *n)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int flow = 0, i = 0, j = 0, jerry = 0;
-	int tom = 0, val2 = 0, tot = 0;
+	int overflow = 0, i = 0, j = 0, digits = 0;
+	int val1 = 0, val2 = 0, temp_tot = 0;
 
 	while (*(n1 + i) != '\0')
 		i++;
@@ -48,31 +48,31 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	j--;
 	if (j >= size_r || i >= size_r)
 		return (0);
-	while (j >= 0 || i >= 0 || flow == 1)
+	while (j >= 0 || i >= 0 || overflow == 1)
 	{
 		if (i < 0)
-			tom = 0;
+			val1 = 0;
 		else
-			tom = *(n1 + i) - '0';
+			val1 = *(n1 + i) - '0';
 		if (j < 0)
 			val2 = 0;
 		else
 			val2 = *(n2 + j) - '0';
-		tot = tom + val2 + flow;
-		if (tot >= 10)
-			flow = 1;
+		temp_tot = val1 + val2 + overflow;
+		if (temp_tot >= 10)
+			overflow = 1;
 		else
-			flow = 0;
-		if (jerry >= (size_r - 1))
+			overflow = 0;
+		if (digits >= (size_r - 1))
 			return (0);
-		*(r + jerry) = (tot % 10) + '0';
-		jerry++;
+		*(r + digits) = (temp_tot % 10) + '0';
+		digits++;
 		j--;
 		i--;
 	}
-	if (jerry == size_r)
+	if (digits == size_r)
 		return (0);
-	*(r + jerry) = '\0';
+	*(r + digits) = '\0';
 	rev_string(r);
 	return (r);
 }

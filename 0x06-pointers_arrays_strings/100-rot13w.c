@@ -1,26 +1,26 @@
 #include "holberton.h"
 
 /**
-  * print_number - print number of letters
-  * @n: integer
-  * Return: zero always
+  * print_number - print numbers chars
+  * @n: integer params
+  * Return: 0
  **/
 
 void print_number(int n)
 {
-	unsigned int tom;
+	unsigned int n1;
 
-	tom = n;
+	n1 = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		tom = -n;
+		n1 = -n;
 	}
 
-	if (tom / 10 != 0)
+	if (n1 / 10 != 0)
 	{
-		print_number(tom / 10);
+		print_number(n1 / 10);
 	}
-	_putchar((tom % 10) + '0');
+	_putchar((n1 % 10) + '0');
 }
