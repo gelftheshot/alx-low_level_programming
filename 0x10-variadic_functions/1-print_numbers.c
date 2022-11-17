@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+
 /**
 *print_numbers - prints numbers
 *@separator: is the separator of numbers
@@ -15,10 +16,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(gelf, int));
-		if (separator != '\0' && i < n - 1)
+		if (separator && i < n - 1)
 			printf("%s", separator);
 	}
-	printf("\n");
 
+	printf("\n");
 	va_end(gelf);
 }
