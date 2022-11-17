@@ -1,9 +1,9 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 /**
-*
+*print_strings - prints string
+*@separator: separate consiquative strings
+*@n: is the numer of argument
 */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -12,17 +12,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list gelf;
 	char *ptr;
 
-	va_start(gelf,n);
+	va_start(gelf, n);
 
 	for (i = 0; i < n; i++)
 	{
-		ptr = va_arg(gelf,char *);
+		ptr = va_arg(gelf, char *);
 
 		if (ptr)
 			printf("%s", ptr);
 		else
 			printf("(nil)");
-		if(separator != '\0' && i < n - 1)
+		if (separator != '\0' && i < n - 1)
 			printf("%s", separator);
 	}
 
