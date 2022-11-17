@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "variadic_functions.h"
-#include <stdarg.h>
 /**
 *print_numbers - prints numbers
 *@separator: is the separator of numbers
@@ -21,5 +19,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 	}
 	printf("\n");
+
 	va_end(gelf);
 }
