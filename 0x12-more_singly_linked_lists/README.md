@@ -1,0 +1,1 @@
+this is the readme file of more singly linked list.
