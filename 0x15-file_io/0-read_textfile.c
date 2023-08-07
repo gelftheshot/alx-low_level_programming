@@ -16,15 +16,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	op = open(filename, O_RDWR);
+	op = open(filename, O_RDONLY);
 	if (op == -1)
 		return (0);
-	buff = malloc(letters);
+
+	buff = malloc(letters * sizeof(char));
+	if (buff == NULL)
+		return (0);
 
 	re = read(op, buff, letters);
-	wr = write(1, buff, re);
+	if (re == -1)
+		return (0);
+	wr = write(STDOUT_FILENO, buff, re);
 
-	if (re == -1 || wr == -1 || re != wr)
+	if (wr == -1 || re != wr)
 	{
 		free(buff);
 		return (0);
