@@ -31,6 +31,13 @@ ALL projects was completed as part of the curriculum for the ALX-SE programme wh
 | [0x0F. C - Function pointers](./0x0F-function_pointers) | Using pointers to functions. Covers how to declare, define, and use function pointers, and their applications in callbacks and event-driven programming. |
 | [0x10. C - Variadic functions](./0x10-variadic_functions) | Functions that accept a variable number of arguments. Explains how to use `stdarg.h` to create functions like `printf` that can handle a varying number of inputs. |
 | [0x12. C - Singly linked lists](./0x12-singly_linked_lists) | Introduction to sigly liked list and. 
+| [0x13. C - More singly linked lists](./0x13-more_singly_linked_lists) | Further exploration of singly linked lists. Covers more complex operations and manipulations, such as inserting and deleting nodes at various positions, and reversing lists. |
+| [0x14. C - Bit manipulation](./0x14-bit_manipulation) | Understanding bitwise operations in C. Covers operators like AND, OR, XOR, and NOT, as well as bit shifts and their practical applications in tasks like setting, clearing, and toggling bits. |
+| [0x15. C - File I/O](./0x15-file_io) | Introduction to file input and output in C. Explains how to open, read, write, and close files using standard library functions. Covers topics such as file pointers, binary files, and error handling in file operations. |
+| [0x17. C - Doubly linked lists](./0x17-doubly_linked_lists) | Introduction to doubly linked lists. Covers the structure and implementation of doubly linked lists, including operations such as insertion, deletion, and traversal in both directions. |
+| [0x18. C - Dynamic libraries](./0x18-dynamic_libraries) | Understanding dynamic libraries in C. Covers creation, usage, and linking of dynamic libraries (`.so` files). Emphasizes the benefits of shared code and runtime linking. |
+| [0x1A. C - Hash tables](./0x1A-hash_tables) | Introduction to hash tables. Covers the concepts of hashing, hash functions, collision resolution techniques, and the implementation of hash tables for efficient data retrieval. |
+| [0x1E. C - Search algorithms](./0x1E-search_algorithms) | Exploration of search algorithms. Covers various algorithms such as linear search, binary search, and other advanced search techniques. Discusses their time and space complexities and use cases. |
 
 ## Author :
 even if all alx student do this project this projct is written by
